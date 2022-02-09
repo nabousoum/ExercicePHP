@@ -1,0 +1,31 @@
+
+.princ{
+    margin: 5%;
+    height: 500px;
+    border: 4mm ridge #ce109e;
+    border-radius: 5%;
+}
+.text{
+    text-align: center;
+    margin-top: 10%;
+    align-items: center;
+    font-size: xx-large;
+}
+h1{
+    font-weight: normal; 
+    font-size: 280%;
+     text-indent: 10px;
+     letter-spacing: -1px;
+     color: #ce109e;
+}
+.boutons{
+    border-radius: 50%;
+}
+.btn1{
+    margin-right: 90%;
+ 
+}
+.btn2:hover{
+    background-color: #ce109e;
+    color: aliceblue;
+}

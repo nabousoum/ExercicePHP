@@ -1,0 +1,63 @@
+.princ{
+    margin:0;
+    height: 500px;
+    padding:10px;
+    background:linear-gradient(to bottom,#ce109e,#f0bfe5);
+ }
+ .exercice11_fieldset{
+      margin:10px;
+      border:none;
+      background-color:#FFFFFF;
+      border-radius:10px;
+      padding:20px;
+      height: 400px;
+   }
+   .exercice11_legend{
+      font-family:verdana, arial, sans-serif;
+      font-size:14pt;
+      font-weight:bold;
+      color:#FFFFFF;
+      margin:10px;
+      padding:10px 20px 10px 20px;
+      background-color:#AAAAAA;
+      border-radius:4px;
+   }
+   h1{
+      font-weight: normal; 
+      font-size: 280%;
+       text-indent: 10px;
+       letter-spacing: -1px;
+       color: #ce109e;
+  }
+  .exercice11_champs{
+    outline:none;
+    border:solid 1px #AAAAAA;
+    padding:10px;
+    border-radius:4px;
+    font-family:verdana, arial, sans-serif;
+    }
+  .text2{
+     text-align: center;
+     justify-content: center;
+  }
+  .boutons{
+    border-radius: 50%;
+ }
+ .btn1:hover{
+    background-color: #ce109e;
+    color: azure;
+  
+ }
+ .btn2:hover{
+    background-color: #ce109e;
+    color: azure;
+ }
+ .btn1{
+    margin-right: 90%;
+    text-decoration: none;
+ }
+ 
+ #btn:hover{
+    background-color: #ce109e;
+    color: azure;
+ }
