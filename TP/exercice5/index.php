@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>EXERCICE 5</title>
-        <link href="style/style.css" rel="stylesheet" />
+        <link href="style/styleEx5.css" rel="stylesheet" />
     </head>
 
 <body>
@@ -39,8 +39,8 @@
         </div>
     </div>
     <div class="boutons">
-        <button class="btn1"><a href="../exercice4/index.php">PRECEDENT</a></button>
-        <button class="btn2"><a href="../exercice6/index.php">SUIVANT</a></button>
+    <button class="btn1" onclick="window.location.href = '../exercice4/index.php';">PRECEDENT</button>
+    <button class="btn2"  onclick="window.location.href = '../exercice6/index.php';">SUIVANT</button>
     </div>
 </body>
 </html>

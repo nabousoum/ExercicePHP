@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>TABLE DE MULTIPLICATION</title>
-        <link href="style/style2.css" rel="stylesheet" />
+        <link href="style/style2Ex9.css" rel="stylesheet" />
     </head>
 
 <body>
@@ -11,27 +11,20 @@
     <div class="princ">
         <div class="text">
             <?php
+            session_start();
             include('fonctions.php');
             if(isset($_POST['btn_sub'])){
-                        $N = $_POST['nbr'];
-            if(estNombre($N) && estPositif($N)){
+                $tabErreur=[];
+                $N = $_POST['nbr'];
+                $_SESSION['post'] = $_POST;
+                valideNombre($N,"nbr",$tabErreur);
+                if (count($tabErreur)==0){
                 
-                echo "table de multiplication de ".$N;
-                ?>
-                <br>
-                <table id="tb" border="1">
-                    <?php
-                        for($i=0;$i<=$N;$i++){ ?>
-                        <tr>
-                        <td>  <?php echo $i." * ".$N." = ".$i*$N."<br>";} 
-                            
-                    ?> </td>
-                        </tr>
-                </table>
-                <?php 
+                    calculMultiplication($N);
             }
             else{
-                echo "veuillez saisir un nombre positif";
+                $_SESSION['err'] = $tabErreur;
+                header('location:index.php');
             }
             }
             else{
@@ -40,7 +33,7 @@
             ?>
         </div>
     </div>
-    <button class="btn1"><a href="index.php">PRECEDENT</a></button>
+    <button class="btn1"  onclick="window.location.href = 'index.php';">PRECEDENT</button>
 </body>
 </html>
 

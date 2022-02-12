@@ -1,43 +1,51 @@
 <?php 
-    function estVide(string $a):bool{
-        return is_empty($a);
+    function estVide($a):bool{
+        return empty($a);
     }
-    function caractereSpeciaux(string $a):bool{
-        $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/";
-        if (preg_match($regex, $a)) {
-           return true;
-        }
-        else{
-            return false;
-        }
-    }
-    function lettreMajuscule(string $a):bool{
-        $ucl = preg_match('/[A-Z]/', $a); 
-        if ("^[$ucl]"){
+    
+    function testNbrCarac($a):bool{
+        if (strlen($a)<25){
             return true;
         }
         else{
             return false;
         }
     }
-    function terminePoint(string $a):bool{
-        $pts = preg_match('/[.]/', $a); 
-        if ("[$pts]$"){
-            return true;
+    
+    function caractereSpeciaux($a){
+        $cpt=0;
+        for($i=0;$i<strlen($a);$i++){
+            if($a[$i]=="."){
+                $cpt++;
+            }
         }
-        else{
-            return false;
+       
+        $tabPhrases = explode(".",$a);
+        $regex = '/[^a-zA-Z_.-0-9\s\.\'\;\,\?]/';
+        $phrases="";
+        for($i=0;$i<$cpt;$i++){
+            if (  testNbrCarac($tabPhrases[$i]) || (preg_match($regex,$tabPhrases[$i]))){ 
+                    unset($tabPhrases[$i]);
+            }
+             else{
+                 if($i==0){
+                     $phrases=$tabPhrases[$i].".";
+                 }
+                 else {
+                    $phrases = $phrases.$tabPhrases[$i].".";
+                 }
+             }
         }
+        $phr=trim($phrases);
+        echo ucfirst($phr);
     }
-    function countCaractere($a):bool{
-        $nbrCar = strlen($a);
-        if($nbrCar<=25){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+   
+   function valideTextarea($a,string $chaine,array &$tabErreur):void{
+    if (estVide($a)){
+        $tabErreur[$chaine] = "veuillez saisir un texte";
     }
+   }
 ?>
 
 

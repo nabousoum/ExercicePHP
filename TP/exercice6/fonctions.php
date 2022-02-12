@@ -5,11 +5,18 @@
     function estNombre($a):bool{
         return is_numeric($a);
     }
-  
+    function estVide($a):bool{
+        return empty($a);
+    }
     
     function valideNombre($a, string $chaine,array &$tabErreur){
         if (!estNombre($a)){
             $tabErreur[$chaine] = "veuillez saisir un nombre";
+        }
+        else{
+            if(estVide($a)){
+                $tabErreur[$chaine] = "le champs ne doit pas etre vide";
+            }
         }
     }
 

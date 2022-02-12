@@ -4,7 +4,7 @@
 <html>
     <head>
         <title>DATE SUIVANTE-PRECEDENTE</title>
-        <link href="css/style2.css" rel="stylesheet" />
+        <link href="css/style2Ex7.css" rel="stylesheet" />
     </head>
 
 <body>
@@ -48,6 +48,6 @@
             ?>
         </div>
     </div>
-    <button class="btn1"><a href="index.php">PRECEDENT</a></button>
+    <button class="btn1"  onclick="window.location.href = 'index.php';">PRECEDENT</button>
         </body>
         </html>

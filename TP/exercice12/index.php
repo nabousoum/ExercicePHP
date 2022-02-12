@@ -1,27 +1,35 @@
+
+<?php include('fonctions.php');?>
 <!doctype html>
 <html>
     <head>
         <title>EXERCICE 12</title>
-        <link href="css/style.css" rel="stylesheet" />
+        <link href="style/styleEx12.css" rel="stylesheet" />
     </head>
 
     <body>
         <marquee><h1>EXERCICE 12</h1></marquee>
-        <form method="post" action="index.php" >
-        <p>CHOISISSEZ UNE LANGUE:</p>
-        <select name="langues">
-            <option  value="fr" selected>Français</option>
-            <option value="en">Anglais</option>
-        </select>
-       <button name="btn_sub">OK</button>
-        </form>
+        <div class="global">
+            <form method="post" action="index.php" >
+            <div class="test">
+                <p>CHOISISSEZ UNE LANGUE:</p>
+                <div class="select-style">
+                    <select name="langues">
+                        <option  value="fr" selected>Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+                </div>
+                <button id="btn" name="btn_sub">OK</button>
+             
+            </form>
+       
         <?php if (isset($_POST['langues'])){ 
             $tabLangues = $_POST['langues'];    
         ?>
             <?php switch($tabLangues) {
                 case 'fr':
             ?>
-            <table border="1">
+            <table class="tab" border="1">
                 <tr>
                     <td>Janvier</td>
                     <td>Avril</td>
@@ -43,7 +51,7 @@
             </table>
             <?php break; ?>
             <?php case 'en':  ?>
-            <table border="1">
+            <table class="tab" border="1">
                 <tr>
                     <td>January</td>
                     <td>April</td>
@@ -67,9 +75,11 @@
             <?php break; ?>
             <?php  }  ?>
     <?php } ?>
+    </div>
+    </div>
     <div class="boutons">
-        <button class="btn1"><a href="../exercice11/index.php">PRECEDENT</a></button>
-        <button class="btn2"><a href="../exercice13/index.php">SUIVANT</a></button>
+    <button class="btn1" onclick="window.location.href = '../exercice11/index.php';">PRECEDENT</button>
+    <button class="btn2"  onclick="window.location.href = '../exercice13/index.php';">SUIVANT</button>
     </div>
     </body>
 </html>

@@ -1,0 +1,44 @@
+.princ{
+    margin: 5%;
+    height: 500px;
+    border: 4mm ridge #ce109e;
+    border-radius: 5%;
+}
+.text{
+    text-align: center;
+    margin-top: 1%;
+    align-items: center;
+    font-size: large;
+}
+h1{
+    font-weight: normal; 
+    font-size: 280%;
+     text-indent: 10px;
+     letter-spacing: -1px;
+     color: #ce109e;
+}
+
+
+.btn1{
+    background-color: white;
+    border-radius: 15px;
+    border: 4px double #ce109e;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+ }
+ .btn1:hover{
+    background-color: #ce109e;
+    color: white;
+ }
+.champs{
+    outline:none;
+    border:solid 1px #ce109e;
+    padding:10px;
+    border-radius:4px;
+    font-family:verdana, arial, sans-serif;
+}

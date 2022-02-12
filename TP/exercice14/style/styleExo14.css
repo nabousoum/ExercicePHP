@@ -1,0 +1,73 @@
+.form2-1{
+   float:left;
+   margin-left: 2%;
+}
+.form2-2{
+    float:right;
+    margin-right: 8%;
+ }
+ .form2{
+     margin-top: 5%;
+ }
+ .form1{
+     margin-left: 30%;
+ }
+ .boutons{
+    margin-top: 20%;
+}
+.btn1,.btn2{
+    background-color: white;
+    border-radius: 15px;
+    border: 4px double #ce109e;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+ }
+ .btn1{
+    margin-left: 2%;
+    margin-right: 80%;
+ }
+ .btn1:hover{
+    background-color: #ce109e;
+    color: white;
+ }
+ .btn2:hover{
+    background-color: #ce109e;
+    color: white;
+ }
+  
+  #btn:hover{
+     background-color: #ce109e;
+     color: azure;
+  }
+ #btn{
+     margin-top: 2%;
+     background-color: white;
+     border-radius: 15px;
+     border: 4px double #ce109e;
+     color: black;
+     font-size: 10px;
+     padding: 5px;
+     width: 80px;
+ }
+ h1{
+    font-weight: normal; 
+    font-size: 280%;
+     text-indent: 10px;
+     letter-spacing: -1px;
+     color: #ce109e;
+}
+textarea{
+    border-radius:15px ;
+}
+label{
+    font-weight: normal; 
+    font-size: 150%;
+     text-indent: 10px;
+     letter-spacing: -1px;
+     color: black;
+}

@@ -1,12 +1,18 @@
 <?php
     function valideNombre($a,string $chaine,array &$tabErreur ):void{
+            if(estVide($a)){
+                $tabErreur[$chaine]="le champs ne doit pas etre vide";
+            }
         
              if(!estNombre($a)){
-                 $tabErreur[$chaine]="Veullez saisir un nombre";
+                 $tabErreur[$chaine]="Veuillez saisir un nombre";
              }
         }
         function estNombre($a):bool{
             return is_numeric($a); 
+        }
+        function estVide($a):bool{
+            return empty($a); 
         }
     function nbrj_jour($mois,$an):int{
         if($mois==2){
@@ -58,16 +64,36 @@
        }
     }
     function datePrecedente($jour,$mois,$an){
+       
         if (dateValide($jour,$mois,$an)){
-            $nj = nbrj_jour($mois,$an);
             if($jour==1){
                 if($mois==1){
-                    $jour=$nj;
+                    $jour=31;
                     $mois=12;
                     $an=$an-1;
                 }
                 else{
-                    $jour=$nj;
+                    if($mois==3){
+                        if ( ($an%100==0 && $an%400==0) || ($an%4==0 && $an%100!=0) ){
+                            $jour=29;
+                        }
+                        else {
+                            $jour=28;
+                        }
+                        $mois=2;
+                        $an=$an;
+                    }
+                    else{
+                        if($mois==5 || $mois==7 || $mois==10 || $mois==12){
+                            $jour=30;
+                        }
+                        else{
+                            $jour=31;
+                        }
+                        $mois= $mois-1;
+                        $annee=$an;
+                    }
+                   
                     $mois=$mois-1;
                 }
             }

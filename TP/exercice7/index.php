@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>EXERCICE 7</title>
-        <link href="css/Style.css" rel="stylesheet" />
+        <link href="css/styleEx7.css" rel="stylesheet" />
     </head>
 
 <body>
@@ -18,21 +18,21 @@
           <div class="text2">
 
              <div> Veuillez saisir le jour :</div>
-              <div> <input class="exercice7_champs" type="text" required="required" name="jour" value="">
+              <div> <input class="exercice7_champs" type="text" name="jour" value="<?php if(!isset($_SESSION['err']['jour']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['jour']; else ''  ?>">
               <?php if(isset($_SESSION['err']['jour'])):?>
                         <span style="color:red"><?php echo $_SESSION['err']['jour'] ?></span>
               <?php endif?></div>
               <br>
 
               <div>Veuillez saisir le mois :</div> 
-              <div><input class="exercice7_champs" type="text" required="required" name="mois" value="">
+              <div><input class="exercice7_champs" type="text" name="mois" value="<?php if(!isset($_SESSION['err']['mois']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['mois']; else ''  ?>">
               <?php if(isset($_SESSION['err']['mois'])):?>
                         <span style="color:red"><?php echo $_SESSION['err']['mois'] ?></span>
               <?php endif?></div>
               <br>
 
               <div>Veuillez saisir l annee :</div>
-              <div> <input class="exercice7_champs" type="text" required="required" name="an" value="">
+              <div> <input class="exercice7_champs" type="text" name="an" value="<?php if(!isset($_SESSION['err']['an']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['an']; else ''  ?>">
               <?php if(isset($_SESSION['err']['an'])):?>
                         <span style="color:red"><?php echo $_SESSION['err']['an'] ?></span>
               <?php endif?></div>
@@ -50,8 +50,8 @@
           ?>
     </div>
     <div class="boutons">
-        <button class="btn1"><a href="../exercice6/index.php">PRECEDENT</a></button>
-        <button class="btn2"><a href="../exercice8/index.php">SUIVANT</a></button>
+    <button class="btn1" onclick="window.location.href = '../exercice6/index.php';">PRECEDENT</button>
+        <button class="btn2"  onclick="window.location.href = '../exercice8/index.php';">SUIVANT</button>
     </div>
         </body>
         </html>

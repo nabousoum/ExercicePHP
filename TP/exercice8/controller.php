@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>LISTE A PUCE</title>
-        <link href="style/style2.css" rel="stylesheet" />
+        <link href="style/style2Ex8.css" rel="stylesheet" />
     </head>
 
 <body>
@@ -13,22 +13,16 @@
             session_start();
             include('fonctions.php');
             if (isset($_POST['btn_sub'])){
-                    
-                    $N = $_POST['nbr'];
-                    if(estNombre($N) && estPositif($N)){
-                        ?>
-                        <ul>
-                            <?php
-                                for($i=0;$i<=$N;$i++){
-                                    echo "<li>".$i."</li>";
-                                }
-                                
-                            ?>
-                        </ul>
-                        <?php  
+                $tabErreur=[];
+                $N = $_POST['nbr'];
+                $_SESSION['post'] = $_POST;
+                    valideNombre($N,"nbr",$tabErreur);
+                    if(count($tabErreur)==0){
+                        generationPuce($N);
                     }
                     else{
-                        echo "entrez un nombre valide";
+                        $_SESSION['err']=$tabErreur;
+                        header('location:index.php');
                     }      
                     
             }
@@ -39,6 +33,7 @@
             ?>
         </div>
     </div>
-    <button class="btn1"><a href="index.php">PRECEDENT</a></button>
+
+    <button class="btn1"  onclick="window.location.href = 'index.php';">PRECEDENT</button>
 </body>
 </html>
