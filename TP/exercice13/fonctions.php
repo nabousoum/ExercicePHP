@@ -19,15 +19,15 @@
                 $cpt++;
             }
         }
-       
         $tabPhrases = explode(".",$a);
-        $regex = '/[^a-zA-Z_.-0-9\s\.\'\;\,\?]/';
+      //  $regex = '/[^a-zA-Z_.-0-9\s\.\'\;\,\?\]/';
         $phrases="";
         for($i=0;$i<$cpt;$i++){
-            if (  testNbrCarac($tabPhrases[$i]) || (preg_match($regex,$tabPhrases[$i]))){ 
-                    unset($tabPhrases[$i]);
+            if (testNbrCarac($tabPhrases[$i]) ){
+                unset($tabPhrases[$i]);
             }
              else{
+                $tabPhrases[$i][0]=strtoupper($tabPhrases[$i][0]);
                  if($i==0){
                      $phrases=$tabPhrases[$i].".";
                  }
@@ -37,7 +37,9 @@
              }
         }
         $phr=trim($phrases);
-        echo ucfirst($phr);
+        $str = preg_replace('/\s\s+/', ' ', $phr);
+        $str = preg_replace('/[^a-zA-Z_.-0-9\s\,\;\'\?]/', '', $str);
+        echo ucfirst($str);
     }
 
    

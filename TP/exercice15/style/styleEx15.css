@@ -1,0 +1,84 @@
+
+.main{
+    display: flex;
+    height: 600px;
+}
+.part1{
+    margin-left: 5%;
+    width: 800px;
+    border: 2mm ridge #ce109e;
+}
+.part2{
+    background-color: bisque;
+    width: 800px;
+}
+#centrer{
+    margin: 20%;
+}
+h1{
+    font-weight: normal; 
+    font-size: 280%;
+     text-indent: 10px;
+     letter-spacing: -1px;
+     color: #ce109e;
+}
+label{
+    font-weight: normal; 
+    font-size: 150%;
+     text-indent: 10px;
+     letter-spacing: -1px;
+     color: black;
+}
+.btn{
+    margin-top: 20%;
+    margin-left: 30%;
+}
+.btnRadio{
+    margin-top: 20%;
+}
+.select{
+    margin-top: 20%;
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input{
+    outline:none;
+    border:solid 1px #AAAAAA;
+    padding:10px;
+    border-radius:4px;
+    font-family:verdana, arial, sans-serif;
+}
+.btn1,.btn2{
+    background-color: white;
+    border-radius: 15px;
+    border: 4px double #ce109e;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+ }
+ .btn1{
+    margin-left: 2%;
+    margin-right: 80%;
+ }
+ .btn1:hover{
+    background-color: #ce109e;
+    color: white;
+ }
+ .btn2:hover{
+    background-color: #ce109e;
+    color: white;
+ }
+ .boutons{
+     margin-top: 5%;
+ }
