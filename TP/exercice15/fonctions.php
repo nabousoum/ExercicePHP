@@ -46,7 +46,7 @@
                 $tab[$i][$j]=0;
             }
         }
-        var_dump ($tab);
+        echo $tab;
     }
     function colorierDessus($a,array $tab){
         for($i=0;$i<($a-1);$i++){

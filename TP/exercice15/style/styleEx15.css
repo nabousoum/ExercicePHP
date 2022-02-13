@@ -9,8 +9,8 @@
     border: 2mm ridge #ce109e;
 }
 .part2{
-    background-color: bisque;
     width: 800px;
+    border: 2mm ridge #ce109e;
 }
 #centrer{
     margin: 20%;
@@ -81,4 +81,9 @@ input{
  }
  .boutons{
      margin-top: 5%;
+ }
+ .matrice{
+     margin-left: 40%;
+     margin-top: 20%;
+     color:#ce109e;
  }

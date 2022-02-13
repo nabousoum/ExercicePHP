@@ -25,7 +25,7 @@
                     <form action="index.php" method="post">
                         <div class="champs">
                             <label>saisissez le numero:</label>
-                            <textarea rows="10" cols="80" style ="border:3px solid <?= $color ?>" name="tels" ></textarea>
+                            <textarea rows="10" cols="80" style ="border:3px solid <?= $color ?>" name="tels" ><?= filter_input(INPUT_POST, 'tels') ?></textarea>
                             <button id="btn" name="btn_sub">VALIDER</button>
                         </div>
                     </form>

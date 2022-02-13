@@ -72,9 +72,29 @@
         }
     }
     function tabNumValide($a):void{
+        $tabValide="";
+        if(valideNumero($a)){
+            $tabValide=$tabValide."/".$a;
+        }
         echo $a;
     }
     function tabNumInvalide($a):void{
         echo $a;
+    }
+    function testValidite($a){
+        $cpt=0;
+        for($i=0;$i<strlen($a);$i++){
+            if($a[$i]=="/"){
+                $cpt++;
+            }
+        }
+        $tabTels = explode("/",$a);
+        $tels="";
+        for($i=0;$i<$cpt;$i++){
+            if (valideNumero($tabTels[$i]) ){
+              $tels=$tels."/".$tabTels[$i];
+            }
+        }
+        echo $tels;
     }
 ?>

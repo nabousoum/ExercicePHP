@@ -55,14 +55,15 @@ ini_set('display_errors', 'on');
         if(isset($_SESSION['err'])){
             unset($_SESSION['err']);
         }
-
+            if(isset($_POST['btn_sub'])){
+                $mat=$_POST['tailleMat'];
+            }
         ?> 
-         <?php 
-                $N = $_POST['tailleMat'];
-                ?>
+         
             <div class="part2">
-               <?php genererMatrice($N); ?><br>
-               <?php colorierDessous($N) ?>
+                <div class="matrice">
+                     <?php genererMatrice($mat); ?>
+                </div>
             </div>
         </div>
         <div class="boutons">
